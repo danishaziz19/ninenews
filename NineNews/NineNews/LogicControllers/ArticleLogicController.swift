@@ -13,13 +13,13 @@ enum ArticleCellType: String{
 }
 
 protocol ArticleLogicControllerDelegate {
-    func didSelectCell(article: Asset)
+    func didSelectCell(article: Article)
 }
 
 class ArticleLogicController: NSObject {
 
     let viewModel: ArticleViewModel = ArticleViewModel()
-    var articles: [Asset] = []
+    var articles: [Article] = []
     var tableView: UITableView?
     var delegate: ArticleLogicControllerDelegate?
 
@@ -79,6 +79,7 @@ class ArticleLogicController: NSObject {
         guard let cell: ArticleTableViewCell = tableView.dequeueReusableCell(withIdentifier: ArticleCellType.article.rawValue) as? ArticleTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         cell.setCell(artical: source)
         return cell
     }

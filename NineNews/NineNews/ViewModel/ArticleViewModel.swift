@@ -20,11 +20,11 @@ class ArticleViewModel: NSObject {
     /// Get Articles
     ///
     /// - Parameter completion: Return Article
-    func getArticle(response: @escaping (_ artical: ViewModelResponse<[Asset]?>) -> ()) {
+    func getArticle(response: @escaping (_ news: ViewModelResponse<[Article]?>) -> ()) {
         self.apiRequest.articles { (result) in
             switch result {
-            case .success(let article):
-                if let articles = article?.assets {
+            case .success(let news):
+                if let articles = news?.article {
                     response(.success(articles))
                 }
             case .error(let error):

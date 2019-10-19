@@ -41,7 +41,7 @@ class ArticleViewController: UIViewController {
 
 extension ArticleViewController: ArticleLogicControllerDelegate {
     
-    func didSelectCell(article: Asset) {
+    func didSelectCell(article: Article) {
         if let articleStoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "articleStoryViewController") as? ArticleStoryViewController {
             articleStoryViewController.logicController.article = article
             self.navigationController?.pushViewController(articleStoryViewController, animated: true)

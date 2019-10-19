@@ -30,7 +30,7 @@ class ArticleTableViewCell: UITableViewCell {
     /// Set Cell
     ///
     /// set variables text headline, lineBy, Abstract and set thumbnil image 
-    func setCell(artical: Asset) {
+    func setCell(artical: Article) {
         self.lblHeadline.text = artical.headline
         self.lblLineBy.text = artical.byLine
         self.lblAbstract.text = artical.theAbstract

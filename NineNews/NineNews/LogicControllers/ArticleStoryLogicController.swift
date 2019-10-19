@@ -11,7 +11,7 @@ import WebKit
 
 class ArticleStoryLogicController: NSObject {
 
-    var article: Asset?
+    var article: Article?
     var webView: WKWebView?
     var navigationBar: UINavigationBar?
     

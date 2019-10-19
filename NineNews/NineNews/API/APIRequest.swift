@@ -24,7 +24,7 @@ class APIRequest: NSObject {
     /// Get Articles
     ///
     /// - Parameter completion: Return Article
-    func articles(completion: @escaping (_ response: APIResult<Article?>) -> ()){
+    func articles(completion: @escaping (_ response: APIResult<News?>) -> ()){
         guard let url = URL(string: API.articles) else { return completion(.error(.api_error(message: "URL error"))) }
        
         self.request(url) { (data, error) in
@@ -33,7 +33,7 @@ class APIRequest: NSObject {
                     completion(.error(FetchError.api_error(message: "Data could not be retrieved")))
                     return
                 }
-                let article = try JSONDecoder().decode(Article.self, from: data)
+                let article = try JSONDecoder().decode(News.self, from: data)
                 print("ARTICLES: \(article)")
                 completion(.success(article))
             } catch {

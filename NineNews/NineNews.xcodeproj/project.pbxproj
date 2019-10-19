@@ -19,6 +19,15 @@
 		1C512178235AB2220005AAE2 /* ArticleStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512177235AB2220005AAE2 /* ArticleStoryViewController.swift */; };
 		1C51217A235AB4060005AAE2 /* ArticleStoryLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512179235AB4060005AAE2 /* ArticleStoryLogicController.swift */; };
 		1C51217C235AB6680005AAE2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C51217B235AB6680005AAE2 /* WebKit.framework */; };
+		1C51217E235AF3A30005AAE2 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51217D235AF3A30005AAE2 /* Author.swift */; };
+		1C512180235AF3C90005AAE2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51217F235AF3C90005AAE2 /* Category.swift */; };
+		1C512182235AF3E50005AAE2 /* Overrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512181235AF3E50005AAE2 /* Overrides.swift */; };
+		1C512184235AF3FE0005AAE2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512183235AF3FE0005AAE2 /* Source.swift */; };
+		1C512186235AF4140005AAE2 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512185235AF4140005AAE2 /* Company.swift */; };
+		1C512188235AF4260005AAE2 /* RelatedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512187235AF4260005AAE2 /* RelatedPost.swift */; };
+		1C51218A235AF4440005AAE2 /* RelatedAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512189235AF4440005AAE2 /* RelatedAsset.swift */; };
+		1C51218C235AF4580005AAE2 /* AssetRelatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51218B235AF4580005AAE2 /* AssetRelatedImage.swift */; };
+		1C51218E235AF4800005AAE2 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51218D235AF4800005AAE2 /* News.swift */; };
 		1CF5911D235986C200442054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5911C235986C200442054 /* AppDelegate.swift */; };
 		1CF59122235986C200442054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CF59120235986C200442054 /* Main.storyboard */; };
 		1CF59124235986C300442054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF59123235986C300442054 /* Assets.xcassets */; };
@@ -58,6 +67,15 @@
 		1C512177235AB2220005AAE2 /* ArticleStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoryViewController.swift; sourceTree = "<group>"; };
 		1C512179235AB4060005AAE2 /* ArticleStoryLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoryLogicController.swift; sourceTree = "<group>"; };
 		1C51217B235AB6680005AAE2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1C51217D235AF3A30005AAE2 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		1C51217F235AF3C90005AAE2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1C512181235AF3E50005AAE2 /* Overrides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overrides.swift; sourceTree = "<group>"; };
+		1C512183235AF3FE0005AAE2 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		1C512185235AF4140005AAE2 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		1C512187235AF4260005AAE2 /* RelatedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedPost.swift; sourceTree = "<group>"; };
+		1C512189235AF4440005AAE2 /* RelatedAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAsset.swift; sourceTree = "<group>"; };
+		1C51218B235AF4580005AAE2 /* AssetRelatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRelatedImage.swift; sourceTree = "<group>"; };
+		1C51218D235AF4800005AAE2 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		1CF59119235986C200442054 /* NineNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF5911C235986C200442054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CF59121235986C200442054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +141,15 @@
 			isa = PBXGroup;
 			children = (
 				1C51216323598B650005AAE2 /* Article.swift */,
+				1C51217D235AF3A30005AAE2 /* Author.swift */,
+				1C51217F235AF3C90005AAE2 /* Category.swift */,
+				1C512181235AF3E50005AAE2 /* Overrides.swift */,
+				1C512183235AF3FE0005AAE2 /* Source.swift */,
+				1C512185235AF4140005AAE2 /* Company.swift */,
+				1C512187235AF4260005AAE2 /* RelatedPost.swift */,
+				1C512189235AF4440005AAE2 /* RelatedAsset.swift */,
+				1C51218B235AF4580005AAE2 /* AssetRelatedImage.swift */,
+				1C51218D235AF4800005AAE2 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,11 +456,20 @@
 				1C51216223598AC10005AAE2 /* ArticleViewModel.swift in Sources */,
 				1CF5911D235986C200442054 /* AppDelegate.swift in Sources */,
 				1C5121712359AE500005AAE2 /* ArticleViewController.swift in Sources */,
+				1C51217E235AF3A30005AAE2 /* Author.swift in Sources */,
 				1C51217A235AB4060005AAE2 /* ArticleStoryLogicController.swift in Sources */,
+				1C51218C235AF4580005AAE2 /* AssetRelatedImage.swift in Sources */,
+				1C512188235AF4260005AAE2 /* RelatedPost.swift in Sources */,
+				1C512184235AF3FE0005AAE2 /* Source.swift in Sources */,
+				1C51218A235AF4440005AAE2 /* RelatedAsset.swift in Sources */,
 				1C51216E2359AB4F0005AAE2 /* TimeIntervalExtenstion.swift in Sources */,
+				1C512180235AF3C90005AAE2 /* Category.swift in Sources */,
 				1C51216923598C960005AAE2 /* APIRequest.swift in Sources */,
+				1C512182235AF3E50005AAE2 /* Overrides.swift in Sources */,
 				1C51216B235995DE0005AAE2 /* ArticleLogicController.swift in Sources */,
 				1C51216723598BCA0005AAE2 /* API.swift in Sources */,
+				1C51218E235AF4800005AAE2 /* News.swift in Sources */,
+				1C512186235AF4140005AAE2 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
