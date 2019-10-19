@@ -1,0 +1,22 @@
+PODS:
+  - MindV (1.0.0)
+
+DEPENDENCIES:
+  - MindV (from `https://github.com/pakidanish/MindV.git`, tag `1.0.11`)
+
+EXTERNAL SOURCES:
+  MindV:
+    :git: https://github.com/pakidanish/MindV.git
+    :tag: 1.0.11
+
+CHECKOUT OPTIONS:
+  MindV:
+    :git: https://github.com/pakidanish/MindV.git
+    :tag: 1.0.11
+
+SPEC CHECKSUMS:
+  MindV: 716f867d2445d528fdb65a32adb59d61e88bcfe4
+
+PODFILE CHECKSUM: 0219d52d87a43342efea5cc6c6b5921f683fb82b
+
+COCOAPODS: 1.8.1
