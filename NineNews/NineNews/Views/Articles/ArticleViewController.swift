@@ -22,8 +22,10 @@ class ArticleViewController: UIViewController {
     
     /// Set Default Value
     func setDefault() {
-        self.logicController.setTableView(tableView: self.tableView)
+        self.title = "Articles"
+        self.logicController.setupTableView(tableView: self.tableView)
         self.logicController.getArticles()
+        self.logicController.delegate = self
     }
     
     /*
@@ -35,4 +37,14 @@ class ArticleViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+extension ArticleViewController: ArticleLogicControllerDelegate {
+    
+    func didSelectCell(article: Asset) {
+        if let articleStoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "articleStoryViewController") as? ArticleStoryViewController {
+            articleStoryViewController.logicController.article = article
+            self.navigationController?.pushViewController(articleStoryViewController, animated: true)
+        }
+    }
 }

@@ -17,6 +17,8 @@
 		1C5121752359AEBF0005AAE2 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5121732359AEBF0005AAE2 /* ArticleTableViewCell.swift */; };
 		1C5121762359AEBF0005AAE2 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5121742359AEBF0005AAE2 /* ArticleTableViewCell.xib */; };
 		1C512178235AB2220005AAE2 /* ArticleStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512177235AB2220005AAE2 /* ArticleStoryViewController.swift */; };
+		1C51217A235AB4060005AAE2 /* ArticleStoryLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C512179235AB4060005AAE2 /* ArticleStoryLogicController.swift */; };
+		1C51217C235AB6680005AAE2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C51217B235AB6680005AAE2 /* WebKit.framework */; };
 		1CF5911D235986C200442054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5911C235986C200442054 /* AppDelegate.swift */; };
 		1CF59122235986C200442054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CF59120235986C200442054 /* Main.storyboard */; };
 		1CF59124235986C300442054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF59123235986C300442054 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		1C5121732359AEBF0005AAE2 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		1C5121742359AEBF0005AAE2 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		1C512177235AB2220005AAE2 /* ArticleStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoryViewController.swift; sourceTree = "<group>"; };
+		1C512179235AB4060005AAE2 /* ArticleStoryLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoryLogicController.swift; sourceTree = "<group>"; };
+		1C51217B235AB6680005AAE2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1CF59119235986C200442054 /* NineNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF5911C235986C200442054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CF59121235986C200442054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C51217C235AB6680005AAE2 /* WebKit.framework in Frameworks */,
 				E77217798DFAA40BC030DC06 /* Pods_NineNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1C51216A235995DE0005AAE2 /* ArticleLogicController.swift */,
+				1C512179235AB4060005AAE2 /* ArticleStoryLogicController.swift */,
 			);
 			path = LogicControllers;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 		98D41A9A579F7A720A852CE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C51217B235AB6680005AAE2 /* WebKit.framework */,
 				E7735C4A068D85B151E7105D /* Pods_NineNews.framework */,
 			);
 			name = Frameworks;
@@ -422,6 +429,7 @@
 				1C51216223598AC10005AAE2 /* ArticleViewModel.swift in Sources */,
 				1CF5911D235986C200442054 /* AppDelegate.swift in Sources */,
 				1C5121712359AE500005AAE2 /* ArticleViewController.swift in Sources */,
+				1C51217A235AB4060005AAE2 /* ArticleStoryLogicController.swift in Sources */,
 				1C51216E2359AB4F0005AAE2 /* TimeIntervalExtenstion.swift in Sources */,
 				1C51216923598C960005AAE2 /* APIRequest.swift in Sources */,
 				1C51216B235995DE0005AAE2 /* ArticleLogicController.swift in Sources */,
@@ -610,7 +618,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = danish.NineNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -628,7 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = danish.NineNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

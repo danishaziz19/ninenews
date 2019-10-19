@@ -12,16 +12,21 @@ enum ArticleCellType: String{
     case article = "articleCell"
 }
 
+protocol ArticleLogicControllerDelegate {
+    func didSelectCell(article: Asset)
+}
+
 class ArticleLogicController: NSObject {
 
     let viewModel: ArticleViewModel = ArticleViewModel()
     var articles: [Asset] = []
     var tableView: UITableView?
+    var delegate: ArticleLogicControllerDelegate?
 
     /// Set TableView
     ///
     /// - set tableview delegate, dataSource and register cell
-    func setTableView(tableView: UITableView) {
+    func setupTableView(tableView: UITableView) {
         self.tableView = tableView
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
@@ -92,7 +97,8 @@ extension ArticleLogicController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let source = articles[indexPath.row]
+        self.delegate?.didSelectCell(article: source)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
