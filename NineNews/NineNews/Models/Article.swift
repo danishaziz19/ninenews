@@ -24,7 +24,6 @@ struct Article: Codable {
     let assetType: String?
     let timeStamp: Int
     
-    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case categories = "categories"
