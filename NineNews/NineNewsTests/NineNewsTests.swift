@@ -140,6 +140,30 @@ class NineNewsTests: XCTestCase {
              XCTAssertNotNil(errorResponse)
         }
     }
+    
+    /// Articale View Controller Test
+    func testArticleViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let articleViewController: ArticleViewController? = storyboard.instantiateViewController(withIdentifier: "articleViewController") as? ArticleViewController
+        articleViewController?.loadView()
+        articleViewController?.viewDidLoad()
+        
+        XCTAssertNotNil(articleViewController, "ArticleViewController is nil")
+        XCTAssertNotNil(articleViewController?.tableView, "tableView is nil")
+        XCTAssertNotNil(articleViewController?.logicController, "logicController is nil")
+    }
+    
+    /// Article Story View Controller Test
+    func testArticleStoryViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let articleStoryViewController: ArticleStoryViewController? = storyboard.instantiateViewController(withIdentifier: "articleStoryViewController") as? ArticleStoryViewController
+        articleStoryViewController?.loadView()
+        articleStoryViewController?.viewDidLoad()
+        
+        XCTAssertNotNil(articleStoryViewController, "ArticleViewController is nil")
+        XCTAssertNotNil(articleStoryViewController?.webView, "webView is nil")
+        XCTAssertNotNil(articleStoryViewController?.logicController, "logicController is nil")
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

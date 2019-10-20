@@ -30,5 +30,16 @@ class NineNewsUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
+    /// Articale View Controller Navigation testing.
+    func testArticleTableViewNavigation() {
+        let app = XCUIApplication()
+        let cells = app.tables.cells
+        sleep(1)
+        XCTAssertGreaterThan(cells.count, 0)
+        
+        cells.element(boundBy: 0).tap()
+        sleep(3)
+        app.navigationBars["Story"].buttons["Articles"].tap()
+    }
 }

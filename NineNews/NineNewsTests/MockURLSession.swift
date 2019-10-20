@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Mock URLSession
 class MockURLSession: URLSession {
     var cachedUrl: URL?
     private let mockTask: MockTask
@@ -23,17 +24,20 @@ class MockURLSession: URLSession {
     }
 }
 
+// Mock URLSessionDataTask
 class MockTask: URLSessionDataTask {
     private let data: Data?
     private let urlResponse: URLResponse?
     private let error1: Error?
     
     var completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
+    
     init(data: Data?, urlResponse: URLResponse?, error: Error?) {
         self.data = data
         self.urlResponse = urlResponse
         self.error1 = error
     }
+    
     override func resume() {
         DispatchQueue.main.async {
             self.completionHandler?(self.data, self.urlResponse, self.error1)
