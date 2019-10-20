@@ -21,6 +21,18 @@ enum FetchError: Error {
 
 class APIRequest: NSObject {
     
+    var session: URLSession!
+    
+    override init() {
+        super.init()
+        self.session = self.getSession()
+    }
+    
+    init(session: URLSession) {
+        super.init()
+        self.session = session
+    }
+    
     /// Get Articles
     ///
     /// - Parameter completion: Return Article
@@ -34,7 +46,6 @@ class APIRequest: NSObject {
                     return
                 }
                 let article = try JSONDecoder().decode(News.self, from: data)
-                print("ARTICLES: \(article)")
                 completion(.success(article))
             } catch {
                 print("error: \(error)")
@@ -48,10 +59,12 @@ class APIRequest: NSObject {
     ///
     /// - Parameter completion: Return Data and Error
     func request(_ url: URL, completion: @escaping (Data?, Error?) -> ()) {
-        let session = self.getSession()
-        session.dataTask(with: URLRequest(url: url)) { data, response, error in
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let task = session.dataTask(with: request) { data, response, error in
             completion(data, error)
-            }.resume()
+        }
+        task.resume()
     }
     
     /// network Session

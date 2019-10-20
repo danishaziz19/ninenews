@@ -68,7 +68,6 @@ class ArticleLogicController: NSObject {
     /// Sorting the latest article first in the list, use article's 'timeStamp
     func articleSorted() {
         self.articles = articles.sorted(by: { $0.timeStamp.date.compare($1.timeStamp.date) == .orderedDescending })
-        print(self.articles)
     }
     
     /// Get CellForRowAt

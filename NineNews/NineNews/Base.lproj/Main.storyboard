@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="PUT-8g-tOD">
             <objects>
-                <navigationController id="ZiQ-CX-0JW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ArticleViewControllerNav" id="ZiQ-CX-0JW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eaK-CS-wZh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +29,7 @@
         <!--Article View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ArticleViewController" customModule="NineNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="articleViewController" id="BYZ-38-t0r" customClass="ArticleViewController" customModule="NineNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
