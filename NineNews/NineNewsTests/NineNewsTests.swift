@@ -28,7 +28,7 @@ class NineNewsTests: XCTestCase {
     }
     
     /// Get Article From API Sets up URL Host and Path as Expected
-    /// The first test case we will create is to test that the get movies method sets up URL Host and Path within the correct expectation.
+    /// The first test case we will create is to test that the get articles method sets up URL Host and Path within the correct expectation.
     func testGetArticleWithExpectedURLHostAndPath() {
         let apiRequest: APIRequest = APIRequest()
         let mockURLSession  = MockURLSession(data: nil, urlResponse: nil, error: nil)
